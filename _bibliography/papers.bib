@@ -1,26 +1,126 @@
----
----
 
-@string{aps = {American Physical Society,}}
-
-@book{einstein1956investigations,
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation,}
+@article{norouzitallabnemesis,
+  title={Nemesis 2011 Team Description Paper},
+  author={Norouzitallab, Mehrab and Javari, Amin and Mohajer, Milad and Ismael, Saman and Salehizadeh, SMA},
+  year={2011}
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics,},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers,}
+@inproceedings{javari2020weakly,
+  title={Weakly Supervised Attention for Hashtag Recommendation using Graph Data},
+  author={Javari, Amin and He, Zhankui and Huang, Zijie and Jeetu, Raj and Chen-Chuan Chang, Kevin},
+  booktitle={Proceedings of The Web Conference},
+  pages={1038--1048},
+  year={2020},
+  pdf={HashtagRecomm.pdf},
+  slides={HashtagRecomm-slides.pdf},
+  abstract={Personalized hashtag recommendation for users could substantially promote user engagement in microblogging websites; users can discover microblogs aligned with their interests. However, user profiling on microblogging websites is challenging because most users tend not to generate content. Our core idea is to build a graph-based profile of users and incorporate it into hashtag recommendation. Indeed, user's followee/follower links implicitly indicate their interests. Considering that microblogging networks are scale-free networks, to maintain the efficiency and effectiveness of the model, rather than analyzing the entire network, we model users based on their links towards hub nodes. That is, hashtags and hub nodes are projected into a shared latent space. To predict the relevance of a user to a hashtag, a projection of the user is built by aggregating the embeddings of her hub neighbors guided by an attention model and then compared with the hashtag. Classically, attention models can be trained in an end to end manner. However, due to the high complexity of our problem, we propose a novel weak supervision model for the attention component, which significantly improves the effectiveness of the model. We performed extensive experiments on two datasets collected from Twitter and Weibo, and the results confirm that our method substantially outperforms the baselines.},
 }
+
+@inproceedings{javari2020rose,
+  title={ROSE: Role-based Signed Network Embedding},
+  author={Javari, Amin and Derr, Tyler and Esmailian, Pouya and Tang, Jiliang and Chang, Kevin Chen-Chuan},
+  booktitle={Proceedings of The Web Conference},
+  pages={2782--2788},
+  year={2020}, 
+  pdf={ROSE.pdf},
+  slides={ROSE-slides.pdf},
+  abstract={In real-world networks, nodes might have more than one type of relationship. Signed networks are an important class of such networks consisting of two types of relations: positive and negative. Recently, embedding signed networks has attracted increasing attention and is more challenging than classic networks since nodes are connected by paths with multi-types of links. Existing works capture the complex relationships by relying on social theories. However, this approach has major drawbacks, including the incompleteness/inaccurateness of such theories. Thus, we propose network transformation based embedding to address these shortcomings. The core idea is that rather than directly finding the similarities of two nodes from the complex paths connecting them, we can obtain their similarities through simple paths connecting their different roles. We employ this idea to build our proposed embedding technique that can be described in three steps: (1) the input directed signed network is transformed into an unsigned bipartite network with each node mapped to a set of nodes we denote as role-nodes. Each role-node captures a certain role that a node in the original network plays; (2) the network of role-nodes is embedded; and (3) the original network is encoded by aggregating the embedding vectors of role-nodes. Our experiments show the novel proposed technique substantially outperforms existing models.}
+ 
+
+}
+
+@inproceedings{izadi2014unifying,
+  title={Unifying inconsistent evaluation metrics in recommender systems},
+  author={Izadi, Maliheh and Javari, Amin and Jalilii, Mahdi},
+  booktitle={Proceedings RecSys Conference, REDD Workshop},
+  year={2014}
+}
+
+@inproceedings{javari2017statistical,
+  title={Statistical link label modeling for sign prediction: Smoothing sparsity by joining local and global information},
+  author={Javari, Amin and Qiu, HongXiang and Barzegaran, Elham and Jalili, Mahdi and Chang, Kevin Chen-Chuan},
+  booktitle={2017 IEEE International Conference on Data Mining (ICDM)},
+  pages={1039--1044},
+  year={2017},
+  organization={IEEE}, 
+  pdf={Smoothing.pdf},
+  abstract={One of the major issues in signed networks is to use network structure to predict the missing sign of an edge. In this paper, we introduce a novel probabilistic approach for the sign prediction problem. The main characteristic of the proposed models is their ability to adapt to the sparsity level of an input network. The sparsity of networks is one of the major reasons for the poor performance of many link prediction algorithms, in general, and sign prediction algorithms, in particular. Building a model that has an ability to adapt to the sparsity of the data has not yet been considered in the previous related works. We suggest that there exists a dilemma between local and global structures and attempt to build sparsity adaptive models by resolving this dilemma. To this end, we propose probabilistic prediction models based on local and global structures and integrate them based on the concept of smoothing. The model relies more on the global structures when the sparsity increases, whereas it gives more weights to the information obtained from local structures for low levels of the sparsity. The proposed model is assessed on three real-world signed networks, and the experiments reveal its consistent superiority over the state of the art methods. As compared to the previous methods, the proposed model not only better handles the sparsity problem, but also has lower computational complexity and can be updated using real-time data streams.}
+
+}
+
+@inproceedings{abbasi2014enhancing,
+  title={Enhancing precision of Markov-based recommenders using location information},
+  author={Abbasi, Ali and Javari, Amin and Jalili, Mahdi and Rabiee, Hamid R},
+  booktitle={2014 International Conference on Advances in Computing, Communications and Informatics (ICACCI)},
+  pages={188--193},
+  year={2014},
+  organization={IEEE}
+}
+
+@inproceedings{javari2016recommender,
+  title={Recommender systems for social networks analysis and mining: precision versus diversity},
+  author={Javari, Amin and Izadi, Malihe and Jalili, Mahdi},
+  booktitle={Complex Systems and Networks},
+  pages={423--438},
+  year={2016},
+  publisher={Springer}
+}
+
+@article{daneshmand2015time,
+  title={A time-aware recommender system based on dependency network of items},
+  author={Daneshmand, Seyed Mohammadhadi and Javari, Amin and Abtahi, Seyed Ebrahim and Jalili, Mahdi},
+  journal={The Computer Journal},
+  volume={58},
+  number={9},
+  pages={1955--1966},
+  year={2015},
+  publisher={OUP}
+}
+
+@article{javari2014recommender,
+  title={Recommender systems based on collaborative filtering and resource allocation},
+  author={Javari, Amin and Gharibshah, Joobin and Jalili, Mahdi},
+  journal={Social Network Analysis and Mining},
+  volume={4},
+  number={1},
+  pages={234},
+  year={2014},
+  publisher={Springer}
+}
+
+@article{javari2014accurate,
+  title={Accurate and novel recommendations: an algorithm based on popularity forecasting},
+  author={Javari, Amin and Jalili, Mahdi},
+  journal={ACM Transactions on Intelligent Systems and Technology (TIST)},
+  volume={5},
+  number={4},
+  pages={1--20},
+  year={2014},
+  publisher={ACM New York, NY, USA}
+}
+
+@article{javari2014cluster,
+  title={Cluster-based collaborative filtering for sign prediction in social networks with positive and negative links},
+  author={Javari, Amin and Jalili, Mahdi},
+  journal={ACM Transactions on Intelligent Systems and Technology (TIST)},
+  volume={5},
+  number={2},
+  pages={1--19},
+  year={2014},
+  publisher={ACM New York, NY, USA}
+}
+
+@article{javari2015probabilistic,
+  title={A probabilistic model to resolve diversity--accuracy challenge of recommendation systems},
+  author={Javari, Amin and Jalili, Mahdi},
+  journal={Knowledge and Information Systems},
+  volume={44},
+  number={3},
+  pages={609--627},
+  year={2015},
+  publisher={Springer}
+}
+
 
 @article{PhysRev.47.777,
   abbr={PhysRev},

@@ -1,78 +1,43 @@
 ---
 layout: page
-title: project 3
-description: a project that redirects to another website
-img: /assets/img/7.jpg
-redirect: https://unsplash.com
+title: Role-based Profiling
+description: A role-based model to profile users in networks with multi-type of interactions. 
+img: /assets/img/p3-1.png
 importance: 3
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+In real-world networks, nodes might have more than one type of relationship. Signed networks are an important class of such networks consisting of two types of relations: positive and negative. In this project, we focus on signed networks as a representative example of network with multi-type connections. Recently, embedding signed networks (as a way to profile nodes/users) has attracted increasing attention. <br>
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+Most existing network embedding methods have been designed for networks with only a single edge type and where relations between two nodes implies closeness. Hence, they primarily try to encode an unsigned network in a way that neighboring nodes (nodes connected through paths) are closer in the embedding space. However, The underlying principles of signed networks can be quite different since a path between nodes does not necessarily indicate their closeness. Existing works capture the complex relationships by relying on social theories like balance theory. However, this approach has major drawbacks, including the incompleteness/inaccurateness of such theories. <br> 
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/1.jpg' | relative_url }}" alt="" title="example image"/>
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/3.jpg' | relative_url }}" alt="" title="example image"/>
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/5.jpg' | relative_url }}" alt="" title="example image"/>
+We propose network transformation based embedding to address these shortcomings. The core idea is that rather than directly finding the similarities of two nodes from the complex paths connecting them, we can obtain their similarities through simple paths connecting their different roles. The idea can be employed for node embedding in networks with multi-type of connections. More specifically, to embed signed networks, we introduce a ROle based Signed network Embedding (ROSE) that bypasses the aforementioned challenges. The underlying idea is to transform the signed network into a bipartite network where each node takes both user and item roles for which they are the giver and receiver of signed links, respectively. Therefore, each node of a signed network can be modeled by a set of roles, denoted as role-nodes, where the relations between role-nodes can be fully captured using unsigned links. Then, ultimately this transformed network can utilize the state of the art unsigned embedding technique. The following figure is a toy example of the transformation process. <br>
+
+<div class="text-center">
+
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/p3-2.png' | relative_url }}" alt="" style="width: 400px" title="Toy example 1"/>
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+      Transformation of a signed network with two nodes to an unsigned bipartite network of role-nodes.
 </div>
-<div class="row">
+
+
+Since each role-node captures a certain aspect of an original node, the embedding vector of a target node can be derived by aggregating the embeddings of the corresponding role-node. In sum, a network transformation based embedding model can be described in three main steps: 1) Network transformation. 2) Embedding the transformed network. 3) Embedding the original network by aggregating the embeddings of the transformed network. Our experiments show the novel proposed technique substantially outperforms existing models. 
+
+
+<div class="text-center">
     <div class="col-sm mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/5.jpg' | relative_url }}" alt="" title="example image"/>
+        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/p3-3.pdf' | relative_url }}" alt="" style="width: 500px" title="Toy example 1"/>
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
-
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal it's glory in the next row of images.
-
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/6.jpg' | relative_url }}" alt="" title="example image"/>
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/11.jpg' | relative_url }}" alt="" title="example image"/>
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+     Transformation of the input signed network to the embeddings of the corresponding role-nodes.
 </div>
 
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/" target="_blank">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
 
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/6.jpg' | relative_url }}" alt="" title="example image"/>
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/11.jpg' | relative_url }}" alt="" title="example image"/>
-    </div>
-</div>
-```
+
+
+
