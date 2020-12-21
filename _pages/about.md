@@ -20,6 +20,6 @@ social: true  # includes social icons at the bottom of the page
 ---
 I’m a Ph.D. student in the <a href="https://cs.illinois.edu">Computer Science Department</a> at <a href="https://illinois.edu">University of Illinois at Urbana-Champaign</a> (UIUC), advised by <a href="https://cs.illinois.edu/about/people/faculty/kcchang"> Kevin Chang</a>.    
 I hold M.Sc. in Artificial Intelligence from <a href="http://www.en.sharif.edu"> Sharif University of Technology </a> where I worked with <a href="https://scholar.google.com/citations?user=a_j5GLAAAAAJ&hl=en">Mahdi Jalili </a> on recommender systems. Before that I studied computer science at <a href="https://aut.ac.ir/en/"> Tehran Polytechnic</a>. <br>
-My research interests are social network analysis, user profiling, deep learning and probabilistic models, with a focus on graph data. 
+My research interests are social network analysis, user profiling, deep learning and probabilistic models, with a focus on large-scale graphs. 
  
 
